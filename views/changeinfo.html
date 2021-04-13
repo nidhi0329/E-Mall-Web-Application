@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<title>Page for changeInfo</title>
+    <meta charset="utf-8" /> 
+<form id="form" class="col s12">
+    <div class="row">
+        <div class="input-field col s6 offset-s3">
+            <i class="material-icons prefix">email</i>
+            <input name="email" id="email" type="email" class="validate" disabled value="{{user.email}}">
+            <label for="email">Email</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6 offset-s3">
+            <i class="material-icons prefix">vpn_key</i>
+            <input name="password" id="password" type="password" class="validate" value="{{user.password}}">
+            <label for="password">Password</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6 offset-s3">
+            <i class="material-icons prefix">payment</i>
+            <input name="paymentInfo" id="payment" type="text" class="validate" value="{{user.paymentInfo}}">
+            <label for="payment">Payment</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6 offset-s3">
+            <i class="material-icons prefix">my_location</i>
+            <input name="address" id="address" type="text" class="validate" value="{{user.address}}">
+            <label for="address">Address</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6 offset-s3">
+            <a id="submit" class="waves-effect waves-light btn">Submit</a>
+        </div>
+    </div>
+</form>
+<script src="/javascripts/changeinfo.js"></script>

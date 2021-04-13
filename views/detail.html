@@ -1,0 +1,43 @@
+<div class="col s12 container">
+    <div id="detail" class="card horizontal">
+
+    </div>
+</div>
+
+<div id="modal" class="modal">
+    <form action="/comments/add" method="post">
+        <div class="modal-content">
+            <h6>Add Comment</h6>
+            <div class="input-field col s12">
+                <textarea name="comment" id="comment" class="materialize-textarea"></textarea>
+                <label for="comment">Add Comment</label>
+            </div>
+            <div class="input-field col s12">
+                <input name="rating" id="rating" class="validate" type="number" min="0" max="5" step="1" />
+                <label for="rating">Rating</label>
+            </div>
+            <input name="product" type="hidden" id="product"/>
+        </div>
+        <div class="modal-footer">
+            <button id="add" href="#!" class="modal-action waves-effect waves-green btn-flat">Add</button>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<!-- comment -->
+<ul id="comment_container" class="collection container with-header"></ul>
+
+<!-- float button -->
+<div class="fixed-action-btn">
+    {{#if sess.user}}
+    <span id="cart-number" class="bubble">{{sess.user.cart.length}}</span>
+    {{else}}
+    <span id="cart-number" class="bubble">0</span>
+    {{/if}}
+    <a href="/products/cart" class="btn-floating btn-large red">
+        <i class="large material-icons">shopping_cart</i></a>
+    </a>
+</div>
+
+<script src="/javascripts/detail.js"></script>
