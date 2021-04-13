@@ -4,4 +4,3 @@ npm run seed
 npm start.
 
 
-Github Link: https://github.com/Alconzy/cs-546-project
